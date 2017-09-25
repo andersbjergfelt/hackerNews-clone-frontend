@@ -1,6 +1,8 @@
 FROM java
 
-COPY ./hackernews-clone-build-docker /hackernews-clone
+MAINTAINER ABJ
+
+COPY ./hackernews-clone-frontend /hackernews-clone
 
 EXPOSE 8080
 
