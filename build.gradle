@@ -15,7 +15,7 @@ targetCompatibility = 1.8
 
 buildscript {
     repositories {
-        maven { url "http://46.101.190.192:8082/artifactory/libs-release-local" }
+     maven { url "http://46.101.190.192:8082/artifactory/libs-release-local" }
      maven { url "http://46.101.190.192:8082/artifactory/libs-snapshot-local" }
      maven { url "http://repo.maven.apache.org/maven2" }
 	 mavenCentral()
