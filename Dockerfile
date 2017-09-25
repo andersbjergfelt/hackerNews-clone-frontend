@@ -1,7 +1,6 @@
 FROM java
-MAINTAINER AKA RHP JEEP
 
-COPY ./hackernews-clone-frontend /hackernews-clone
+COPY ./hackerNews-clone-frontend /hackernews-clone
 
 EXPOSE 8080
 
