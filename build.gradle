@@ -12,6 +12,7 @@ repositories {
      maven { url "http://46.101.190.192:8082/artifactory/libs-release-local" }
      maven { url "http://46.101.190.192:8082/artifactory/libs-snapshot-local" }
      maven { url "http://repo.maven.apache.org/maven2" }
+	 mavenCentral()
 }
 dependencies {
     compile group: 'com.daef', name: 'hackernews-clone-backend', version:'0.0.1-SNAPSHOT'
