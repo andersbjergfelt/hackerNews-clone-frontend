@@ -1,8 +1,8 @@
 FROM java
 
-COPY /hackerNews-clone-frontend /hackerNews-clone
+COPY ./hackernews-clone-frontend /hackernews-clone
 
 EXPOSE 8080
 
-CMD [ "/bin/bash", "-c", "/hackerNews-clone/start.sh" ]
+CMD [ "/bin/bash", "-c", "/hackernews-clone/start.sh" ]
 
