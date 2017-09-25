@@ -8,8 +8,7 @@ version = '0.0.1-SNAPSHOT'
 
 description = """hackernews-clone-frontend"""
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+
 buildscript {
    repositories {
 	 mavenCentral()
@@ -21,11 +20,7 @@ dependencies {
     }
 
 }
-subprojects {
-apply plugin: 'java'
-apply plugin: 'application'
-apply plugin: 'org.springframework.boot.gradle.plugin.SpringBootPlugin'
-}
+
 repositories {
      maven { url "http://46.101.190.192:8082/artifactory/libs-release-local" }
      maven { url "http://46.101.190.192:8082/artifactory/libs-snapshot-local" }
@@ -38,3 +33,11 @@ dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.7.RELEASE")
 		compile("org.springframework.boot:spring-boot-starter-web")
     }
+	
+	allprojects {
+    apply plugin: 'java'
+	apply plugin: 'application'
+	apply plugin: 'org.springframework.boot.gradle.plugin.SpringBootPlugin'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
