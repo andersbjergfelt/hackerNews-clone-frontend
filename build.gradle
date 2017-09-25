@@ -1,18 +1,17 @@
-apply plugin: 'java'
-apply plugin: 'application'
-apply plugin: 'org.springframework.boot.gradle.plugin.SpringBootPlugin'
+
 
 
 
 
 group = 'com.daef'
-version = '1.0-SNAPSHOT'
+version = '0.0.1-SNAPSHOT'
 
 description = """hackernews-clone-frontend"""
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
-
+buildscript {
+   
 
 repositories {
      maven { url "http://46.101.190.192:8082/artifactory/libs-release-local" }
@@ -26,4 +25,9 @@ dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.7.RELEASE")
 		compile("org.springframework.boot:spring-boot-starter-web")
     }
-
+}
+subprojects {
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'org.springframework.boot.gradle.plugin.SpringBootPlugin'
+}
