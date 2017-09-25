@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'jar'
+apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
+
+group = 'com.daef'
+version = '1.0-SNAPSHOT'
+
+description = """hackernews-clone-frontend"""
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+repositories {
+        
+     maven { url "http://46.101.190.192:8082/artifactory/libs-release-local" }
+     maven { url "http://46.101.190.192:8082/artifactory/libs-snapshot-local" }
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    compile group: 'com.daef', name: 'hackernews-clone-backend', version:'0.0.1-SNAPSHOT'
+   
+}
